@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Search I. E. Irodov’s general physics problems, read independent worked solutions, and browse the published-answer audit.">
+  <meta name="color-scheme" content="light">
+  <title>Irodov · Problems in General Physics</title>
+  <link rel="icon" href="web/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="web/vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="web/site.css">
+  <script defer src="web/vendor/katex/katex.min.js"></script>
+  <script type="module" src="web/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#reading">Skip to reading pane</a>
+  <header class="masthead">
+    <div class="frame masthead-inner">
+      <a class="brand" href="./" aria-label="Irodov solutions home">
+        <span class="brand-mark" aria-hidden="true">∫</span>
+        <span>Irodov<span class="brand-subtitle">General physics</span></span>
+      </a>
+      <nav aria-label="Primary">
+        <a id="solutions-tab" aria-current="page" href="./">Solutions</a>
+        <a id="audit-tab" href="?view=audit">Audit findings</a>
+      </nav>
+      <a class="repo-link" href="https://github.com/supertjhok/irodov-physics-audit">GitHub repository</a>
+    </div>
+  </header>
+
+  <section class="intro" aria-labelledby="site-title">
+    <div class="frame intro-inner">
+      <div>
+        <p class="edition">I. E. Irodov · Mir English edition, 1988 printing</p>
+        <h1 id="site-title">Problems in General Physics</h1>
+        <p class="intro-copy">Problem statements, independent derivations, and an audit of the published answers.</p>
+      </div>
+      <p id="site-counts" class="site-counts"></p>
+    </div>
+  </section>
+
+  <main class="frame workspace">
+    <aside class="filters" aria-labelledby="filter-title">
+      <h2 id="filter-title">Find a problem</h2>
+      <form id="lookup" role="search" aria-label="Find a problem">
+        <label for="number">Problem number</label>
+        <div class="search-field">
+          <input id="number" type="search" placeholder="e.g. 1.375" autocomplete="off" spellcheck="false">
+          <button class="search-button" type="submit" aria-label="Open matching problem">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 4 4"/></svg>
+          </button>
+        </div>
+        <label for="chapter">Chapter</label>
+        <div class="select-wrap"><select id="chapter"><option value="">All chapters</option></select></div>
+        <div id="verdict-field" hidden>
+          <label for="verdict">Audit result</label>
+          <div class="select-wrap"><select id="verdict"></select></div>
+        </div>
+      </form>
+      <div id="side-results">
+        <div class="result-header">
+          <h3>Problems</h3>
+          <p id="result-count" role="status"></p>
+        </div>
+        <div id="result-scroll" class="result-scroll">
+          <ol id="problem-list" aria-label="Matching problems"></ol>
+        </div>
+        <button id="more-problems" class="secondary-button" type="button" hidden>Show more problems</button>
+      </div>
+    </aside>
+
+    <article id="reading" class="reading" aria-busy="true" tabindex="-1">
+      <p class="placeholder" role="status">Loading the problem index…</p>
+    </article>
+  </main>
+
+  <footer class="frame footer">
+    <span>Source edition · Mir Publishers, English translation 1981, third printing 1988</span>
+    <a href="https://github.com/supertjhok/irodov-physics-audit/blob/main/index.json">Machine-readable index</a>
+  </footer>
+  <noscript>
+    <p class="frame">JavaScript is needed for the search interface. Read the <a href="https://github.com/supertjhok/irodov-physics-audit#chapters">chapter files</a> or the <a href="https://github.com/supertjhok/irodov-physics-audit/tree/main/audit">audit report</a> on GitHub.</p>
+  </noscript>
+</body>
+</html>

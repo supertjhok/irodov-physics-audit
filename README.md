@@ -1,8 +1,8 @@
 # Irodov general physics solutions and answer audit
 
-Independent worked solutions indexed against I. E. Irodov’s *Problems in General Physics* (Mir Publishers, English translation 1981, third printing 1988). The project covers **1,878 problems in 40 chapters**. It includes derivations, confidence ratings, limitations, and 36 generated figures.
+Independent worked solutions indexed against I. E. Irodov’s *Problems in General Physics* (Mir Publishers, English translation 1981, third printing 1988). The project covers **1,878 problems in 40 chapters**. It includes derivations, confidence ratings, limitations, and 143 generated figures.
 
-[Browse the chapters](#chapters) · [Read the answer audit](audit/README.md) · [Machine-readable index](index.json)
+[Open the searchable site](https://supertjhok.github.io/irodov-physics-audit/) · [Browse the chapters](#chapters) · [Read the answer audit](audit/README.md) · [Machine-readable index](index.json)
 
 ## What the audit found
 
@@ -25,7 +25,7 @@ The audit compared **1,825 entries** with independently written solutions. The p
 
 ## How to use the material
 
-Use the problem numbers with a copy of the cited edition. The public files contain original derivations and audit commentary. The source PDF, source drawings, and verbatim problem corpus are held separately. Confidence ratings reflect derivation and input quality. Three records are provisional and one is partial. Audit amendments appear above the historical derivation and in the structured record when a result or premise was corrected.
+The chapter files pair the problem statements with independent derivations. Source page and figure numbers refer to the cited edition. Confidence ratings reflect derivation and input quality. Three records are provisional and one is partial. Audit amendments appear with the worked solutions and in the structured records. The audit report preserves the pre-audit results for comparison.
 
 Each chapter has a readable Markdown page and JSON records. The audit JSON uses the problem ID as its key and records the verdict, available printed page references, and the reasoning. A Python lookup works without third-party dependencies.
 
@@ -33,6 +33,8 @@ Each chapter has a readable Markdown page and JSON records. The audit JSON uses 
 python lookup.py 1.375
 python lookup.py 3.337 --audit
 ```
+
+To preview the GitHub Pages site locally, run `python -m http.server 8000` from this folder and open the server address in a browser.
 
 ## Chapters
 
